@@ -12,4 +12,39 @@
     align-items: center;
     font-size: 16px;
   }
+
+  &__top-nav-tel {
+    color: #e39717;
+    font-size: 30px;
+  }
+
+  &__top-nav {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__top-icon-tel {
+    margin-right: 10px;
+  }
+
+  &__top-nav-item {
+    margin: auto 13px;
+
+    &:first-child {
+      display: flex;
+      line-height: normal;
+    }
+
+    .follow-us {
+      color: #999;
+    }
+  }
+  //@include media-breakpoint-up(md) {
+  //
+  //  &__top-nav {
+  //    flex: 1 1 auto;
+  //    justify-content: flex-end;
+  //  }
+  //}
 }
