@@ -15,27 +15,48 @@
     </div>
   </div>
   <div class="header__main">
+    <div class="header__main-logo">
+        <a routerLink="/"><img src="./assets/images/OCB_GO_logo.png"></a>
+      </div>
     <div class="header__main-menu">
-      <div class="header__main-menu-header">
-
-      </div>
-      <div class="header__main-nav">
+      <nav class="header__main-nav d-flex justify-content-end flex-wrap">
+          <div class="header__main-nav-item">
+            <div class="header__main-nav-main-page">
+              <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ 'Trang chủ' | uppercase }}</a>
+            </div>
+          </div>
+          <div class="header__main-nav-item">
+            <div class="header__main-nav-main-page">
+              <a routerLink="/gioi-thieu" routerLinkActive="active">{{ 'Giới thiệu' | uppercase }}</a>
+            </div>
+          </div>
+          <div class="header__main-nav-item">
+            <div class="header__main-nav-main-page">
+              <a routerLink="/gioi-thieu" routerLinkActive="active">{{ 'Dịch vụ' | uppercase }}</a>
+              <i (click)="isCollapsed = !isCollapsed"
+                 [attr.aria-expanded]="!isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"></i>
+            </div>
+<!--            <div class="header__sub-menu">-->
+<!--              <ul class="header__main-nav-ul list-unstyled">-->
+<!--                <li class="header__main-nav-ul-item"><a>Thẻ</a></li>-->
+<!--                <li class="header__main-nav-ul-item"><a>Tiết kiệm</a></li>-->
+<!--                <li class="header__main-nav-ul-item"><a>Vay</a></li>-->
+<!--                <li class="header__main-nav-ul-item"><a>Tài chính thông minh</a></li>-->
+<!--              </ul>-->
+<!--            </div>-->
+          </div>
+          <div class="header__main-nav-item">
+            <div class="header__main-nav-main-page">
+              <a routerLink="/lien-he" routerLinkActive="active">{{ 'Liên hệ' | uppercase }}</a>
+            </div>
+          </div>
         <div class="header__main-nav-item">
           <div class="header__main-nav-main-page">
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Trang chủ</a>
+            <a routerLink="/lien-he" routerLinkActive="active">{{ 'My Account' | uppercase }}</a>
+            <img src="./assets/images/header-logo/not_log_in.png">
           </div>
         </div>
-        <div class="header__main-nav-item">
-          <div class="header__main-nav-main-page">
-            <a routerLink="/gioi-thieu" routerLinkActive="active">Giới thiệu</a>
-          </div>
-        </div>
-        <div class="header__main-nav-item">
-          <div class="header__main-nav-main-page">
-            <a routerLink="/lien-he" routerLinkActive="active">Liên hệ</a>
-          </div>
-        </div>
-      </div>
+        </nav>
     </div>
   </div>
 </div>

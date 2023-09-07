@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -28,6 +28,7 @@ const APP_COMPONENTS = [
   ],
   imports: [
     BrowserModule,
+    CollapseModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

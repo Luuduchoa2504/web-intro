@@ -40,6 +40,59 @@
       color: #999;
     }
   }
+
+  &__main {
+    padding: 10px 52px;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70px;
+    background: #14a142;
+    display: flex;
+  }
+
+  &__main-menu {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+
+  &__main-nav-main-page {
+    a {
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      letter-spacing: normal;
+      font-weight: 400;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: #e39717;
+        text-decoration: none;
+        position: relative;
+      }
+
+      &.active {
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+        }
+      }
+
+
+
+    }
+
+    img {
+      margin-left: 16px;
+      margin-right: -42px;
+    }
+  }
+
+  &__main-nav-item {
+    margin: auto 25px;
+  }
+
   //@include media-breakpoint-up(md) {
   //
   //  &__top-nav {
