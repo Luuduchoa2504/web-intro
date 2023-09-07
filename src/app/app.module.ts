@@ -9,17 +9,27 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { SignUpNewsletterComponent } from './components/sign-up-newsletter/sign-up-newsletter.component';
+import { MyAccountComponent } from './pages/my-account/my-account.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import {MaterialModule} from "./modules";
 
 const APP_CONTAINERS = [
   HomepageComponent,
   ContactUsComponent,
   AboutUsComponent,
+  ServicesComponent,
+  MyAccountComponent,
 ]
 
 const APP_COMPONENTS = [
   HeaderComponent,
   FooterComponent,
-  SignUpNewsletterComponent
+  SignInComponent,
+  SignUpNewsletterComponent,
+  SignUpComponent,
 ]
 
 @NgModule({
@@ -27,12 +37,13 @@ const APP_COMPONENTS = [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    
   ],
   imports: [
     BrowserModule,
     // CollapseModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

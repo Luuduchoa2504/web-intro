@@ -1,0 +1,53 @@
+.footer {
+  $root: &;
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+    align-items: center;
+    background: #08a43b;;
+  }
+
+  &__main-inner-item {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+
+    .omni-text {
+      display: block;
+      margin: 28px auto 68px auto;
+    }
+    p {
+      font-size: 16px;
+      margin-right: 7px;
+    }
+  }
+
+  &__main-inner-item-contact {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__main-inner-item-social {
+    a {
+      display: block;
+      margin: 0 7px;
+    }
+  }
+
+  &__bottom {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #037628;
+
+    p {
+      margin: 0;
+    }
+  }
+
+}
