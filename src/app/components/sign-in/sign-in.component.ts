@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {LoginService} from "./login.service";
 // import {LoginService} from "./login.service";
 
 @Component({
@@ -17,16 +18,18 @@ export class SignInComponent implements OnInit, AfterViewInit {
 
   authenticationError = false;
   passwordVisible = false;
-  loginForm = new FormGroup({
-    username: new FormControl(null, Validators.required),
-    password: new FormControl(null, Validators.required),
+  loginForm = this.fb.group({
+    username: [null, [Validators.required]],
+    password: [null, [Validators.required]],
   });
+
 
 
   constructor(
     // private loginService: LoginService,
     private fb: FormBuilder,
     private router: Router,
+    private accountService: LoginService,
   ) {}
 
   ngOnInit(): void {}
@@ -56,15 +59,19 @@ export class SignInComponent implements OnInit, AfterViewInit {
   //     );
   // }
 
-  // submitForm() {
-  //   if (this.loginForm.invalid) {
-  //     return;
-  //   }
-  //
-  //   this.accountService
-  //     .login(this.loginForm.get('username')?.value, this.loginForm.get('password')?.value)
-  //     .subscribe((response) => {
-  //       this.router.navigate(['/dashboard']);
-  //     });
-  // }
+  submitForm() {
+    const username = this.loginForm.get('username')?.value;
+    const pass = this.loginForm.get('password')?.value;
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+    console.log(typeof username,typeof pass)
+
+    // this.accountService
+    //   .login(username, pass)
+    //   .subscribe((response) => {
+    //     this.router.navigate(['/dashboard']);
+    //   });
+  }
 }

@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {MaterialModule} from "./modules";
+import {SharedModule} from "./shared/shared.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 const APP_CONTAINERS = [
   HomepageComponent,
@@ -40,6 +43,10 @@ const APP_COMPONENTS = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule,
+    HttpClientModule,
     // CollapseModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
