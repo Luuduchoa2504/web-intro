@@ -1,11 +1,53 @@
-<form class="col-9">
-  <div class="form-group d-flex">
-    <input type="text" name="email" class="form-control col-lg-2" placeholder="Tên đăng nhập">
+<!--<form class="col-9">-->
+<!--  <div class="form-group d-flex">-->
+<!--    <input type="text" name="email" class="form-control col-lg-2" placeholder="Tên đăng nhập">-->
+<!--  </div>-->
+<!--  <div class="form-group d-flex">-->
+<!--    <input type="password"  name="password" class="form-control col-lg-2" placeholder="Mật khẩu">-->
+<!--  </div>-->
+<!--  <div class="text-center">-->
+<!--    <button type="submit" class="btn btn-primary" >Đăng nhập</button>-->
+<!--  </div>-->
+<!--</form>-->
+
+<form>
+  <div class="form-group shadow-soft pt-2 pb-2">
+    <div class="p-inputgroup">
+      <input pInputText
+             class="input-form"
+             type="text"
+             name="username"
+             id="username"
+             placeholder="Tên đăng nhập"
+             formControlName="username"
+             #username
+             data-cy="username"
+      />
+    </div>
   </div>
-  <div class="form-group d-flex">
-    <input type="password" name="password" class="form-control col-lg-2" placeholder="Mật khẩu">
+  <div class="form-group shadow-soft pt-2">
+    <div class="p-inputgroup">
+<!--      <span class="p-inputgroup-addon"><i class="pi pi-unlock"></i></span>-->
+      <input pInputText
+             class="input-form"
+             [type]="passwordVisible ? 'text' : 'password'"
+             name="password"
+             id="password"
+             placeholder="Mật khẩu"
+             formControlName="password"
+             data-cy="password"
+      />
+<!--      <span class="p-inputgroup-addon eye" (click)="passwordVisible = !passwordVisible"><i [ngClass]="passwordVisible ? 'pi pi-eye-slash': 'pi pi-eye'" ></i></span>-->
+    </div>
   </div>
-  <div class="text-center">
-    <input type="submit" class="btn btn-my" value="Đăng nhập">
+  <div class="button-login p-d-flex p-jc-end">
+    <button
+      id="auth-login-btn"
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="loginForm.invalid"
+    >
+      Đăng nhập
+    </button>
   </div>
 </form>
