@@ -1,0 +1,49 @@
+.home {
+    &__main-target {
+        margin-top: 100px; //
+        flex-direction: column;
+    }
+
+    &__main-title {
+
+    }
+
+    &__main-transaction {
+        margin-top: 150px;
+    }
+
+    &__main-transaction-top {
+        background-image: url('../../../assets/images/home-page/Layer_4.png');
+        height: 650px;
+        flex-direction: column;
+
+        h1 {
+            color: #078a32
+        }
+    }
+
+    &__main-transaction-desc {
+        flex-direction: column;
+
+        &-item {
+            padding: 0px 340px;
+        }
+
+    }
+
+    &__main-transaction-create {
+        flex-direction: column;
+    }
+
+    &__main-passport {
+
+    }
+
+    &__main-other-promotion {
+        justify-content: space-between;
+    }
+
+    &__main-other-item {
+        flex-direction: column;
+    }
+}
