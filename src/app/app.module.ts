@@ -19,6 +19,7 @@ import {SharedModule} from "./shared/shared.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { PerfectServiceComponent } from './components/perfect-service/perfect-service.component';
+import { EmailContactComponent } from './components/email-contact/email-contact.component';
 
 const APP_CONTAINERS = [
   HomepageComponent,
@@ -43,6 +44,7 @@ const APP_COMPONENTS = [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
+    EmailContactComponent,
   ],
   imports: [
     BrowserModule,

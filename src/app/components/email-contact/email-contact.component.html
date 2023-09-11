@@ -1,0 +1,64 @@
+<form [formGroup]="loginForm">
+    <div class="form-group shadow-soft pt-2 pb-2 d-flex">
+        <div class="p-inputgroup">
+            <input pInputText
+                class="input-form half-width"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Tên"
+                formControlName="username"
+                #username
+                data-cy="username"
+            />
+            <input pInputText
+                class="input-form form-phone-number half-width"
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Số điện thoại"
+                formControlName="phone"
+                #phone
+                data-cy="phone"
+            />
+        </div>
+    </div>
+    <div class="form-group shadow-soft pt-2 pb-2">
+      <div class="p-inputgroup">
+        <input pInputText
+               class="input-form full-width"
+               type="text"
+               name="username"
+               id="username"
+               placeholder="Email"
+               formControlName="email"
+               #username
+               data-cy="email"
+        />
+      </div>
+    </div>
+    <div class="form-group shadow-soft pt-2">
+      <div class="p-inputgroup">
+        <textarea pInputTextArea
+               class="input-form text-area-form full-width"
+               name="content"
+               id="content"
+               placeholder="Lời nhắn"
+               formControlName="content"
+               data-cy="content"
+        ></textarea>
+      </div>
+    </div>
+    <div class="button-send p-d-flex p-jc-end">
+      <button
+        id="auth-login-btn"
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="loginForm.invalid"
+        (click)="submitForm()"
+      >
+        Gửi
+      </button>
+    </div>
+  </form>
+  

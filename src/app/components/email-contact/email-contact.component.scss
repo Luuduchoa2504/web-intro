@@ -1,20 +1,37 @@
+.form-phone-number {
+    margin-left: 20px;
+}
+
 .input-form {
+    min-width: 245px;
     padding: 16px;
-    width: 100%;
     height: 51px;
     border-radius: 3px;
     border: 1px solid #dddddd;
     background-color: #ffffff;
 }
 
-.button-signup {
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 326px;
+}
+
+.text-area-form {
+    height: 180px;
+}
+
+.button-send {
     margin-top: 25px;
     .btn {
         float: right;
         width: 158px;
         height: 51px;
         border-radius: 3px;
-        background-color: #14a142;
         border: 1px solid #dddddd;
+        background-color: #14a142;
+        // margin-right: 164px;
     }
 }

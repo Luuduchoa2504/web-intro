@@ -44,6 +44,43 @@
           color: #8e8d8d;
           font-size: 24px;
           letter-spacing: normal;
+          max-width: 750px;
+          text-align: center;
         }
+    }
+
+    &__main-content {
+      margin-top: 80px;
+      padding: 0 140px;
+  }
+
+    &__main-content-desc {
+      h2 {
+          color: #08a43b;
+          font-size: 30px;
+          font-weight: 500;
+          letter-spacing: normal;
       }
+    }
+
+    &__main-content-detail {
+      margin-bottom: 50px;
+
+      img {
+        width: auto;
+        height: 50px;
+        margin-right: 20px;
+      }
+    }
+
+    &__main-content-info {
+      h3 {
+        font-size: 20px;
+        color: #333333;
+      }
+      span {
+        font-size: 20px;
+        color: #666666;
+      }
+    }
 }
