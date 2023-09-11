@@ -1,0 +1,49 @@
+.perfect-service {
+    padding: 75px 50px;
+    margin-top: 110px;
+    margin-bottom: 116px;
+    background-image: url("../../../assets/images/home-page/Layer_1.png");
+    width: 100%;
+    height: auto;
+
+    &-wrapper {
+        justify-content: center;
+    }
+
+    .first-row {
+        gap: 190px;
+    }
+
+    .second-row {
+        margin-top: 100px;
+        gap: 48px;
+    }
+  }
+
+
+
+.perfect-service-item {
+    
+    p {
+        max-width: 370px;
+    }
+
+    img {
+        width: 108px;
+        height: 108px;
+    }
+
+    &:first-child {
+      text-align: right;
+    }
+}
+
+.perfect-service-icon {
+    &:first-child {
+
+    }
+}
+
+.perfect-service-desc {
+    margin: auto 25px;
+}

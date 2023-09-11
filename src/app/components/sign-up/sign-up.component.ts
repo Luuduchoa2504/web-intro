@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
+
+  username?: ElementRef;
+  authenticationError = false;
+  passwordVisible = false;
+  loginForm = this.fb.group({
+    username: [null, [Validators.required]],
+    email: [null, [Validators.required]],
+    phone: [null, [Validators.required]],
+    password: [null, [Validators.required]],
+    passwordCheck: [null, [Validators.required]],
+  });
+
+  constructor(
+    private fb: FormBuilder,
+  ) {}
+
+  submitForm() {}
 
 }

@@ -1,0 +1,83 @@
+.banner {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .breadcumbs {
+    background-color: #f8f9fa;
+    height: 60px;
+    font-size: 18px;
+    vertical-align: middle;
+    padding-left: 20px;
+  
+    &__home {
+      margin: 0;
+      color: #e39717;
+    }
+  
+    &__intro {
+      margin: 0;
+      color: #008c44;
+    }
+  }
+
+  .account {
+    margin-top: 110px;
+
+    &__main {
+        margin-top: 90px;
+        min-height: 450px;
+    }
+
+    &-title {
+        flex-direction: column;
+
+        h1 {
+            color: #008c44;
+            font-weight: 400;
+            font-style: 36px;
+        }
+
+        p {
+            color: #666666;
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: normal;
+        }
+    }
+
+    &__main-content-desc {
+        h2 {
+            color: #08a43b;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: normal;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            letter-spacing: normal;
+            font-weight: 400;
+        }
+    }
+
+    &__main-content {
+        padding: 0 140px;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+::ng-deep {
+    .mdc-tab__content {
+        color: #14a142;
+
+        &.active {
+            color: #e39717;
+        }
+    }
+
+}

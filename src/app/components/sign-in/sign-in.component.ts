@@ -10,9 +10,6 @@ import {LoginService} from "./login.service";
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit, AfterViewInit {
-  // @Output() loginGranted = new EventEmitter<any>();
-  // @Output() loginFailed = new EventEmitter<any>();
-
 
   username?: ElementRef;
 
@@ -62,16 +59,12 @@ export class SignInComponent implements OnInit, AfterViewInit {
   submitForm() {
     const username = this.loginForm.get('username')?.value;
     const pass = this.loginForm.get('password')?.value;
+    console.log(username, pass);
+    
     if (this.loginForm.invalid) {
       return;
     }
-
-    console.log(typeof username,typeof pass)
-
-    // this.accountService
-    //   .login(username, pass)
-    //   .subscribe((response) => {
-    //     this.router.navigate(['/dashboard']);
-    //   });
+    // this.accountService.login(username, pass).subscribe();
   }
+
 }
