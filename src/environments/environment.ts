@@ -1,4 +1,4 @@
 export const environment = {
-  SERVER_API_URl: 'http://localhost:9992/',
+  SERVER_API_URl: 'http://localhost:3000',
   KEY_TOKEN: 'accessToken',
 }

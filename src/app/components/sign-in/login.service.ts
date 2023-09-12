@@ -10,9 +10,9 @@ export class LoginService {
 
   public resourceUrl = `${Constants.SERVER_API_URL}`;
 
-  constructor(private http: HttpClient,) { }
+  constructor(private http: HttpClient) { }
 
-  login(username: string, password: string) {
-    return this.http.post(`${this.resourceUrl}/api/login`, {username, password});
+  login(email: string | null | undefined, password: string | null | undefined) {
+    return this.http.post(`${this.resourceUrl}/api/login`, {email, password});
   }
 }

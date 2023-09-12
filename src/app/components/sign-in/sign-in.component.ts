@@ -2,7 +2,8 @@ import {AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output} from
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {LoginService} from "./login.service";
-// import {LoginService} from "./login.service";
+import {AuthService} from "../../core/auth/auth.service";
+import * as jwt from 'jsonwebtoken';
 
 @Component({
   selector: 'app-sign-in',
@@ -27,6 +28,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
     private fb: FormBuilder,
     private router: Router,
     private accountService: LoginService,
+    private authService: AuthService,
   ) {}
 
   ngOnInit(): void {}
@@ -60,11 +62,19 @@ export class SignInComponent implements OnInit, AfterViewInit {
     const username = this.loginForm.get('username')?.value;
     const pass = this.loginForm.get('password')?.value;
     console.log(username, pass);
-    
+
     if (this.loginForm.invalid) {
       return;
     }
-    // this.accountService.login(username, pass).subscribe();
+    this.accountService.login(username, pass).subscribe(
+      // (val: any) => {
+      //   if (val.accesToken) {
+      //     const key = `vc)3@mqUjZjb8D'xb@#Qg{mRAunV,";yVDM48eY8A;MFf=xZ{=`;
+      //     const userInfo = jwt.verify(val.accesToken, key);
+      //     this.authService.setUserInfo(userInfo.toString());
+      //   }
+      // }
+    );
   }
 
 }
