@@ -36,7 +36,7 @@ const APP_COMPONENTS = [
   SignUpNewsletterComponent,
   SignUpComponent,
   PerfectServiceComponent,
-
+  EmailContactComponent,
 ]
 
 @NgModule({
@@ -44,7 +44,6 @@ const APP_COMPONENTS = [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    EmailContactComponent,
   ],
   imports: [
     BrowserModule,
