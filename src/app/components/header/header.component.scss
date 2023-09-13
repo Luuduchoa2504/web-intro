@@ -101,3 +101,41 @@
   //  }
   //}
 }
+
+@media screen and (max-width: 990px) {
+  .header {
+
+    &__top {
+      height: 100px;
+      padding: 14px 20px;
+      justify-content: space-between;
+    }
+
+    &__top-nav {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__top-nav-item {
+      margin: 0 6px;
+
+      .follow-us {
+        display: none;
+      }
+    }
+
+    &__top-nav-wrapper {
+      margin-right: 5%;
+    }
+
+    &__main {
+      height: 70px;
+      padding: 10px 20px;
+    }
+
+    &__main-menu {
+      display: none;
+    }
+
+  }
+}

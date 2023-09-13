@@ -49,5 +49,33 @@
       margin: 0;
     }
   }
+}
 
+@media only screen and (max-width: 768px) {
+  .footer {
+
+    &__main-inner {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    &__main-inner-item {
+      p {
+        margin: 0 18px 0 0;
+      }
+      .omni-text {
+        margin: 40px auto;
+      }
+
+      &-contact {
+        display: block;
+        margin-bottom: 28px;
+      }
+    }
+
+    .inner-sec {
+      margin: 80px 0;
+    }
+  }
 }
