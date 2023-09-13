@@ -81,3 +81,27 @@
     }
 
 }
+
+@media only screen and (max-width: 990px) {
+
+  .account {
+
+    &__main {
+      flex-direction: column;
+  
+      &-authen {
+        padding: 10px 5%;
+        width: 100%;
+        min-height: 470px;
+      }
+    }
+
+    &__main-content-desc {
+      display: none;
+    }
+
+    &__main-content-img {
+      display: none;
+    }
+  }
+}

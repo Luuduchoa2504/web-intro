@@ -20,9 +20,8 @@
     }
   }
 
-
-
 .perfect-service-item {
+
     
     p {
         max-width: 370px;
@@ -38,12 +37,36 @@
     }
 }
 
-.perfect-service-icon {
-    &:first-child {
-
-    }
-}
-
 .perfect-service-desc {
     margin: auto 25px;
+}
+
+.perfect-service-photo-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 990px){
+    .perfect-service {
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first-row {
+            gap: 0;
+        }
+
+        &-item {
+            justify-content: center;
+            width: 100%;
+            margin: 30px auto;
+        }
+
+        &-photo {
+            display: none;
+        }
+        &-photo-mobile {
+            display: block;
+        }
+    }
 }
