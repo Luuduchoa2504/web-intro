@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {LocalStorageService, SessionStorageService} from "ngx-webstorage";
-import {Constants} from "../../helpers";
+import {Constants} from "../../helpers/constants";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {

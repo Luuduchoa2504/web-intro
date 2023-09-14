@@ -66,15 +66,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
     if (this.loginForm.invalid) {
       return;
     }
-    this.accountService.login(username, pass).subscribe(
-      // (val: any) => {
-      //   if (val.accesToken) {
-      //     const key = `vc)3@mqUjZjb8D'xb@#Qg{mRAunV,";yVDM48eY8A;MFf=xZ{=`;
-      //     const userInfo = jwt.verify(val.accesToken, key);
-      //     this.authService.setUserInfo(userInfo.toString());
-      //   }
-      // }
-    );
+    this.accountService.login(username, pass).subscribe();
   }
 
 }
