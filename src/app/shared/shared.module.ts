@@ -5,7 +5,7 @@ import { MaterialModule } from "../modules";
 
 const sharedModule = [
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule, 
 ]
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { LocalStorageService, SessionStorageService } from "ngx-webstorage";
-import { Constants } from "../../helpers";
+import { Constants } from "../../helpers/constants";
 import { Login } from "../../components/sign-in/login.model";
 import { map, Observable } from "rxjs";
 import  { verify } from 'jsonwebtoken'
@@ -40,7 +40,7 @@ export class AuthJwtService {
   login(credentials: Login): Observable<void> {
     return this.http
       .post<JwtToken>(
-        Constants.SERVER_API_URL + 'api/login',
+        Constants.SERVER_API_URL + 'api/auth',
         //hardcode rememberMe to false
         {...credentials, rememberMe: false}
       )
@@ -53,9 +53,9 @@ export class AuthJwtService {
 
   private authenticateSuccess(response: JwtToken, rememberMe: boolean): void {
     const jwt = response.id_token;
-    const key = `vc)3@mqUjZjb8D'xb@#Qg{mRAunV,";yVDM48eY8A;MFf=xZ{=`;
-    const userInfo = verify(jwt, key)
-    this.authService.setUserInfo(userInfo.toString());
+    // const key = `vc)3@mqUjZjb8D'xb@#Qg{mRAunV,";yVDM48eY8A;MFf=xZ{=`;
+    // const userInfo = verify(jwt, key)
+    // this.authService.setUserInfo(userInfo.toString());
     if (rememberMe) {
       this.$localStorage.store(Constants.KEY_TOKEN, jwt);
       this.$sessionStorage.clear(Constants.KEY_TOKEN);

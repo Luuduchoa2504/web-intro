@@ -66,7 +66,15 @@ export class SignInComponent implements OnInit, AfterViewInit {
     if (this.loginForm.invalid) {
       return;
     }
-    this.accountService.login(username, pass).subscribe();
+    this.accountService.login(username, pass).subscribe((res: any) => {
+      this.authenticationError = false;
+      if (res) {
+        localStorage.setItem('token', `${res.accessToken}`);
+        localStorage.setItem('userInfo', `${res?.user?.name}`)
+        this.router.navigate(['/']);        
+        this.authService.setUserInfo(res?.user?.name);
+      }
+    });
   }
 
 }
