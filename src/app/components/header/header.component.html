@@ -38,14 +38,14 @@
 <!--              <i (click)="isCollapsed = !isCollapsed"-->
 <!--                 [attr.aria-expanded]="!isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"></i>-->
             </div>
-<!--            <div class="header__sub-menu">-->
-<!--              <ul class="header__main-nav-ul list-unstyled">-->
-<!--                <li class="header__main-nav-ul-item"><a>Thẻ</a></li>-->
-<!--                <li class="header__main-nav-ul-item"><a>Tiết kiệm</a></li>-->
-<!--                <li class="header__main-nav-ul-item"><a>Vay</a></li>-->
-<!--                <li class="header__main-nav-ul-item"><a>Tài chính thông minh</a></li>-->
-<!--              </ul>-->
-<!--            </div>-->
+            <div class="header__sub-menu">
+              <ul class="header__sub-menu-nav-ul">
+                <li class="header__sub-menu-nav-ul-item"><a>Thẻ</a></li>
+               <li class="header__sub-menu-nav-ul-item"><a>Tiết kiệm</a></li>
+               <li class="header__sub-menu-nav-ul-item"><a>Vay</a></li>
+               <li class="header__sub-menu-nav-ul-item"><a>Tài chính thông minh</a></li>
+             </ul>
+            </div>
           </div>
           <div class="header__main-nav-item">
             <div class="header__main-nav-main-page">
@@ -55,7 +55,8 @@
         <div class="header__main-nav-item">
           <div class="header__main-nav-main-page">
             <a routerLink="/myaccount" routerLinkActive="active">{{ accountLabel }}</a>
-            <img src="./assets/images/header-logo/not_log_in.png">
+            <img class ="header__main-nav-account" src="./assets/images/header-logo/not_log_in.png">
+            <ul *ngIf="isLoggedIn" class="header__main-nav-logout" (click)="logout()"><li class="header__main-nav-logout-item">Đăng xuất</li></ul>
           </div>
         </div>
         </nav>

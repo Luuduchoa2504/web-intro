@@ -23,6 +23,8 @@ export class SignUpComponent {
     private fb: FormBuilder,
   ) {}
 
-  submitForm() {}
+  submitForm() {
+    
+  }
 
 }

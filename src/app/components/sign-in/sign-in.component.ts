@@ -71,8 +71,8 @@ export class SignInComponent implements OnInit, AfterViewInit {
       if (res) {
         localStorage.setItem('token', `${res.accessToken}`);
         localStorage.setItem('userInfo', `${res?.user?.name}`)
-        this.router.navigate(['/']);        
         this.authService.setUserInfo(res?.user?.name);
+        this.router.navigate(['/']);        
       }
     });
   }

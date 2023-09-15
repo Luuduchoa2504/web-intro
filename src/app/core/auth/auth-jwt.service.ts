@@ -51,6 +51,14 @@ export class AuthJwtService {
       );
   }
 
+  logout(): Observable<void> {
+    return new Observable((observer) => {
+      localStorage.removeItem('token');
+      localStorage.removeItem('userInfo');
+      observer.complete();
+    })
+  }
+
   private authenticateSuccess(response: JwtToken, rememberMe: boolean): void {
     const jwt = response.id_token;
     // const key = `vc)3@mqUjZjb8D'xb@#Qg{mRAunV,";yVDM48eY8A;MFf=xZ{=`;

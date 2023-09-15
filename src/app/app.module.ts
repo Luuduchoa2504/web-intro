@@ -20,6 +20,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { PerfectServiceComponent } from './components/perfect-service/perfect-service.component';
 import { EmailContactComponent } from './components/email-contact/email-contact.component';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 const APP_CONTAINERS = [
   HomepageComponent,
@@ -56,7 +57,7 @@ const APP_COMPONENTS = [
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [LocalStorageService, SessionStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

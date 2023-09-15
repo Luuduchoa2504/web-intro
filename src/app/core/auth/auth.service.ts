@@ -17,6 +17,8 @@ export class AuthService {
   }
 
   getUserInfo() {
+    console.log(this.userInfo);
+    
     return this.userInfo.asObservable();
   }
 
