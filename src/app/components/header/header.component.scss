@@ -96,7 +96,7 @@
         visibility: visible;
       }
 
-      .header__main-nav-logout {
+      .header__main-nav-account-label {
         visibility: visible;
       }
     }
@@ -142,17 +142,27 @@
     }
   }
 
-  &__main-nav-logout {
+  &__main-nav-account-label {
     visibility: hidden;
     position: absolute;
-    background-color:  #078a32;
+    border-radius: 5px;
+    background-color:  #00dd47;
     list-style: none;
     padding: 12px 12px;
     color: #fff;
     font-size: 18px;
     top: 52px;
     width: 120px;
-    left: -14px;
+    left: 60px;
+
+    &::before {
+      content: "";
+      border: 20px solid;
+      border-color: transparent transparent #00dd47 transparent;
+      position: absolute;
+      right: 16px;
+      top: -32px;
+    }
 
     &::after {
       content: "";
@@ -167,9 +177,12 @@
     &-item {
       &:hover {
         cursor: pointer;
-        color: #e6d61f;
       }
     }
+  }
+
+  &__main-nav-account-logged {
+    cursor: pointer;
   }
 }
 

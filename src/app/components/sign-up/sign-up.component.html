@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm">
+<form [formGroup]="signupForm">
   <div class="form-group shadow-soft pt-2 pb-2">
     <div class="p-inputgroup">
       <input pInputText
@@ -25,6 +25,10 @@
              #phone
              data-cy="phone"
       />
+
+      <p class="err-text mt-1" *ngIf="signupForm.get('phone')?.hasError('invalidPhone') && signupForm.get('phone')?.touched">
+        Số điện thoại không hợp lệ. Vui lòng nhập 10 chữ số.
+      </p>
     </div>
   </div>
   <div class="form-group shadow-soft pt-2 pb-2">
@@ -32,13 +36,16 @@
       <input pInputText
              class="input-form"
              type="text"
-             name="username"
-             id="username"
+             name="email"
+             id="email"
              placeholder="Email"
              formControlName="email"
              #username
              data-cy="email"
       />
+      <p class="err-text mt-1" *ngIf="signupForm.get('email')?.hasError('email')">
+        Sai định dạng email. Vui lòng nhập lại!
+      </p>
     </div>
   </div>
   <div class="form-group shadow-soft pt-2">
@@ -59,12 +66,15 @@
       <input pInputText
              class="input-form"
              [type]="passwordVisible ? 'text' : 'password'"
-             name="password"
-             id="password"
+             name="confirmPassword"
+             id="confirmPassword"
              placeholder="Nhập lại mật khẩu"
-             formControlName="passwordCheck"
-             data-cy="password"
+             formControlName="confirmPassword"
+             data-cy="confirmPassword"
       />
+      <p class="err-text" *ngIf="signupForm.hasError('passwordMismatch') && signupForm.get('confirmPassword')?.touched">
+        Mật khẩu không trùng. Vui lòng nhập lại mật khẩu!
+      </p>
     </div>
   </div>
   <div class="button-signup p-d-flex p-jc-end">
@@ -72,7 +82,7 @@
       id="auth-login-btn"
       type="submit"
       class="btn btn-primary"
-      [disabled]="loginForm.invalid"
+      [disabled]="signupForm.invalid"
       (click)="submitForm()"
     >
       Đăng ký

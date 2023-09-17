@@ -3,6 +3,10 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {LoginService} from "./login.service";
 import {AuthService} from "../../core/auth/auth.service";
+import {CustomToastService} from "../../shared/utils/custom-toast.service";
+import {NgxSpinnerService} from "ngx-spinner";
+import {finalize} from "rxjs";
+import {ToastrService} from "ngx-toastr";
 // import * as jwt from 'jsonwebtoken';
 
 @Component({
@@ -29,6 +33,8 @@ export class SignInComponent implements OnInit, AfterViewInit {
     private router: Router,
     private accountService: LoginService,
     private authService: AuthService,
+    private _toastService: CustomToastService,
+    private _spinner: NgxSpinnerService,
   ) {}
 
   ngOnInit(): void {}
@@ -39,42 +45,32 @@ export class SignInComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // login(): void {
-  //
-  //   this.loginService
-  //     .login({
-  //       username: this.loginForm.get('username')!.value,
-  //       password: this.loginForm.get('password')!.value,
-  //     }).pipe()
-  //     .subscribe(
-  //       (res) => {
-  //         this.authenticationError = false;
-  //         this.loginGranted.emit(res);
-  //       },
-  //       (err) => {
-  //         this.authenticationError = true;
-  //         this.loginFailed.emit(err);
-  //       }
-  //     );
-  // }
 
   submitForm() {
     const username = this.loginForm.get('username')?.value;
     const pass = this.loginForm.get('password')?.value;
-    console.log(username, pass);
-
     if (this.loginForm.invalid) {
       return;
     }
-    this.accountService.login(username, pass).subscribe((res: any) => {
-      this.authenticationError = false;
-      if (res) {
-        localStorage.setItem('token', `${res.accessToken}`);
-        localStorage.setItem('userInfo', `${res?.user?.name}`)
-        this.authService.setUserInfo(res?.user?.name);
-        this.router.navigate(['/']);        
-      }
-    });
+    this._spinner.show();
+    this.accountService.login(username, pass)
+      .pipe((finalize(() => {
+        this._spinner.hide();
+      })))
+      .subscribe(
+        (res: any) => {
+        this.authenticationError = false;
+        if (res) {
+          localStorage.setItem('token', `${res.accessToken}`);
+          localStorage.setItem('userInfo', `${res?.user?.name}`)
+          this.authService.setUserInfo(res?.user?.name);
+          this.router.navigate(['/']);
+          this._toastService.showSuccess('Thành công', 'Đăng nhâp thành công');
+        }
+      },
+        (err) => {
+          this._toastService.showError('Thất bại', 'Sai tên đăng nhập hoặc mật khẩu')
+        }
+    );
   }
-
 }

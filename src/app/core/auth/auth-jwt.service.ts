@@ -21,11 +21,7 @@ export class AuthJwtService {
     private authService: AuthService,
     private $localStorage: LocalStorageService,
     private $sessionStorage: SessionStorageService,
-  ) {
-    this.authService.getUserInfo().subscribe(val => {
-      console.log(val)
-    })
-  }
+  ) {}
 
   getToken(): string {
     const tokenInLocalStorage: string | null = this.$localStorage.retrieve(

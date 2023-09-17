@@ -54,9 +54,10 @@
           </div>
         <div class="header__main-nav-item">
           <div class="header__main-nav-main-page">
-            <a routerLink="/myaccount" routerLinkActive="active">{{ accountLabel }}</a>
-            <img class ="header__main-nav-account" src="./assets/images/header-logo/not_log_in.png">
-            <ul *ngIf="isLoggedIn" class="header__main-nav-logout" (click)="logout()"><li class="header__main-nav-logout-item">Đăng xuất</li></ul>
+            <a routerLink="/myaccount" routerLinkActive="active">{{ 'My Account' }}</a>
+            <img *ngIf="!isLoggedIn" class ="header__main-nav-account" src="./assets/images/header-logo/not_log_in.png">
+            <img *ngIf="isLoggedIn" class ="header__main-nav-account-logged" src="./assets/images/header-logo/person_copy.png" (click)="logout()">
+            <ul *ngIf="isLoggedIn" class="header__main-nav-account-label"><li class="header__main-nav-account-label-item">{{ accountLabel }}</li></ul>
           </div>
         </div>
         </nav>
