@@ -10,7 +10,7 @@ import {SendMailService} from "./services/send-mail.service";
 })
 export class SignUpNewsletterComponent implements OnInit {
   submitForm: FormGroup = this.fb.group({
-    email: [null, [Validators.required, Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+    email: [null,[Validators.email]],
   });
 
   constructor(

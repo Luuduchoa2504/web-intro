@@ -2,8 +2,17 @@
   <div class="newsletter__inner">
     <div class="newsletter__title">{{ 'Đăng kí nhận thông tin từ OCB' | uppercase}}</div>
     <form class="newsletter__form d-flex flex-fill" [formGroup]="submitForm">
-      <input class="newsletter__input" formControlName="email" placeholder="Địa chỉ email của bạn"/>
-      <button class="newsletter__button btn btn-primary" (click)="send()">{{ 'Gửi' }}</button>
+      <input pInputText
+             class="input-form"
+             type="text"
+             name="email"
+             id="email"
+             placeholder="Địa chỉ email của bạn"
+             formControlName="email"
+             #username
+             data-cy="email"
+      />
+      <button class="newsletter__button btn btn-primary" (click)="send()" [disabled]="submitForm.invalid">{{ 'Gửi' }}</button>
     </form>
   </div>
 </div>
