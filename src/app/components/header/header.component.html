@@ -60,21 +60,22 @@
             <ul *ngIf="isLoggedIn" class="header__main-nav-account-label"><li class="header__main-nav-account-label-item">{{ accountLabel }}</li></ul>
           </div>
         </div>
-        </nav>
+      </nav>
     </div>
-
-    <div class="header__mobile-menu-icon" (click)="toggleMobileMenu()">
-      <img src="../../../assets/images/header-logo/menu_icon.png" alt="">
-    </div>
+    <!-- Mobile -->
+    <label for="nav__mobile-input"><img class="nav__mobile-btn" src="../../../assets/images/header-logo/menu_icon.png" alt=""></label>
+    <input type="checkbox" class="nav_input" hidden id="nav__mobile-input">
+    <label for="nav__mobile-input" class="nav__overlay"></label>
     
-    <!-- Mobile Menu Container -->
-    <div class="header__mobile-menu" [class.open]="mobileMenuOpen">
-      <!-- Mobile Menu Items -->
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ 'Trang chủ' }}</a>
-      <a routerLink="/gioi-thieu" routerLinkActive="active">{{ 'Giới thiệu' }}</a>
-      <a routerLink="/dich-vu" routerLinkActive="active">{{ 'Dịch vụ' }}</a>
-      <a routerLink="/lien-he" routerLinkActive="active">{{ 'Liên hệ' }}</a>
-      <a routerLink="/myaccount" routerLinkActive="active">{{ 'My Account' }}</a>
+    <div class="nav__mobile">
+      <label for="nav__mobile-input" class="nav__mobile-close"></label>
+      <div class="nav__mobile-menu">
+        <div class="nav__mobile-menu-item"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ 'Trang chủ' }}</a></div>
+        <div class="nav__mobile-menu-item"><a routerLink="/gioi-thieu" routerLinkActive="active">{{ 'Giới thiệu' }}</a></div>
+        <div class="nav__mobile-menu-item"><a routerLink="/dich-vu" routerLinkActive="active">{{ 'Dịch vụ' }}</a></div>
+        <div class="nav__mobile-menu-item"> <a routerLink="/lien-he" routerLinkActive="active">{{ 'Liên hệ' }}</a></div>
+        <div class="nav__mobile-menu-item"><a routerLink="/myaccount" routerLinkActive="active">{{ 'My Account' }}</a></div>
+      </div>
     </div>
   </div>
 </div>
