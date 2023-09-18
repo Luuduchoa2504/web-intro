@@ -61,6 +61,7 @@
     }
 
     &__main-inner-item {
+
       p {
         margin: 0 18px 0 0;
       }
@@ -76,6 +77,52 @@
 
     .inner-sec {
       margin: 80px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer {
+
+    &__main {
+      padding: 40px 25px;
+    }
+    
+    &__main-inner-item {
+      font-size: 12px;
+
+      .omni-text {
+        margin: 20px 0;
+      }
+       
+      p {
+        font-size: 10px;
+        margin-right: 6px;
+      }
+
+      .footer__ocb-omni {
+        width: 180px;
+      }
+    }
+
+    &__main-inner-item-social {
+
+      img {
+        width: 22px;
+      }
+    }
+
+    &__main-inner-item-contact {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    &__bottom {
+      height: 52px;
+    }
+
+    &__bottom-copyright {
+        font-size: 10px;
     }
   }
 }

@@ -10,9 +10,9 @@
       </div>
       <div class="header__top-nav-wrapper d-flex">
         <div class="header__top-nav-item"><span class="follow-us">Theo dõi chúng tôi</span></div>
-        <div class="header__top-nav-item"><img src="./assets/images/header-logo/FB.png"></div>
-        <div class="header__top-nav-item"><img src="./assets/images/header-logo/TW.png"></div>
-        <div class="header__top-nav-item"><img src="./assets/images/header-logo/YT.png"></div>
+        <div class="header__top-nav-item"><a href="https://www.facebook.com/phuongdongbank/"><img src="./assets/images/header-logo/FB.png"></a></div>
+        <div class="header__top-nav-item"><a href="https://twitter.com/ocbbank?lang=en"><img src="./assets/images/header-logo/TW.png"></a></div>
+        <div class="header__top-nav-item"><a href="https://www.youtube.com/channel/UCUWi0zTAFa7WTIAQlf65M2w"><img src="./assets/images/header-logo/YT.png"></a></div>
       </div>
     </div>
   </div>
@@ -61,6 +61,20 @@
           </div>
         </div>
         </nav>
+    </div>
+
+    <div class="header__mobile-menu-icon" (click)="toggleMobileMenu()">
+      <img src="../../../assets/images/header-logo/menu_icon.png" alt="">
+    </div>
+    
+    <!-- Mobile Menu Container -->
+    <div class="header__mobile-menu" [class.open]="mobileMenuOpen">
+      <!-- Mobile Menu Items -->
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ 'Trang chủ' }}</a>
+      <a routerLink="/gioi-thieu" routerLinkActive="active">{{ 'Giới thiệu' }}</a>
+      <a routerLink="/dich-vu" routerLinkActive="active">{{ 'Dịch vụ' }}</a>
+      <a routerLink="/lien-he" routerLinkActive="active">{{ 'Liên hệ' }}</a>
+      <a routerLink="/myaccount" routerLinkActive="active">{{ 'My Account' }}</a>
     </div>
   </div>
 </div>

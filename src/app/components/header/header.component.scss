@@ -220,6 +220,71 @@
     &__main-menu {
       display: none;
     }
+  }
+}
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header {
+    &__top {
+      height: 80px;
+      padding: 9px 20px;
+      justify-content: space-between;
+    }
+
+    &__top-logo {
+      img {
+        width: 90px;
+        height: auto;
+      }
+    }
+
+    &__mobile-menu-icon {
+      img {
+        width: 25px;
+        height: auto;
+      }
+    }
+
+    &__top-nav {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__top-nav-item {
+      margin: 0 6px;
+
+      .follow-us {
+        display: none;
+      }
+
+      .header__top-nav-tel {
+        font-size: 20px;
+      }
+
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+
+    &__top-nav-wrapper {
+      margin-right: 5%;
+    }
+
+    &__main {
+      height: 70px;
+      padding: 10px 20px;
+      justify-content: space-between;
+      &-logo {
+        img {
+          width: 120px;
+          height: auto;
+        }
+      }
+    }
+
+    &__main-menu {
+      display: none;
+    }
   }
 }

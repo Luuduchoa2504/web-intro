@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   isCollapsed = true;
   accountLabel: string = 'My Account';
   isLoggedIn = false;
+  mobileMenuOpen = false;
   constructor(private authService: AuthService, private loginService: LoginService, private router: Router) {}
 
   ngOnInit(): void {
@@ -28,9 +29,15 @@ export class HeaderComponent implements OnInit {
     })
   }
 
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen; // Toggle the menu state
+  }
+
+
   logout() {
     this.loginService.logout();
     location.reload();
     this.router.navigate(['/']);
   }
+
 }
