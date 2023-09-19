@@ -2,7 +2,6 @@
 //@import "~bootstrap/scss/variables";
 //@import "~bootstrap/scss/mixins";
 //@import '/assets/styles/variables';
-
 .header {
   $root: &;
 
@@ -16,6 +15,7 @@
   &__top-nav-tel {
     color: #e39717;
     font-size: 30px;
+    font-family: Montserrat;
   }
 
   &__top-nav {
@@ -211,6 +211,17 @@
 }
 
 .nav {
+
+  &__mobile-close {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 13rem;
+    z-index: 2;
+  }
+
   &__mobile-btn {
     display: none;
     width: 28px;
@@ -236,17 +247,49 @@
     right: 0;
     bottom: 0;
     width: 250px;
-    background-color: #fff;
+    background-color: #14a142;
     z-index: 1000;
     transform: translateX(100%);
     opacity: 0;
-    transition: transform linear 0.3s opacity linear 0.3s;
+    //transition: transform linear 0.3s opacity linear 0.3s;
+  }
+
+  &-mobile-has-dropdown {
+    color: white;
+    &:hover, active {
+      color: #e39717;
+    }
+  }
+
+  &__mobile-menu-item {
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .dropdown-item {
+      list-style: none;
+      display: none;
+      &_link {
+
+      }
+    }
+
+    .dropdown-btn {
+      display: none;
+    }
+
+    .dropdown-btn:checked + ul {
+      display: block;
+    }
   }
 
   &__mobile-menu {
     position: absolute;
     display: block;
     width: 100%;
+    margin: 65px auto auto 23px;;
+    list-style: none;
   }
 }
 
@@ -362,3 +405,74 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 319px) {
+  .header {
+    &__top {
+      height: 80px;
+      padding: 9px 20px;
+      justify-content: space-between;
+    }
+
+    &__top-logo {
+      img {
+        width: 90px;
+        height: auto;
+      }
+    }
+
+    &__mobile-menu-icon {
+      img {
+        width: 25px;
+        height: auto;
+      }
+    }
+
+    &__top-nav {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__top-nav-item {
+      margin: 0 6px;
+
+      .follow-us {
+        display: none;
+      }
+
+      .header__top-nav-tel {
+        font-size: 20px;
+      }
+
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+
+    &__top-nav-wrapper {
+      margin-right: 5%;
+    }
+
+    &__main {
+      height: 70px;
+      padding: 10px 20px;
+      justify-content: space-between;
+      &-logo {
+        img {
+          width: 120px;
+          height: auto;
+        }
+      }
+    }
+
+    &__main-menu {
+      display: none;
+    }
+  }
+
+  .nav__mobile-btn {
+    display: block;
+  }
+}
+

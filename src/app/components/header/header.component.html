@@ -66,15 +66,26 @@
     <label for="nav__mobile-input"><img class="nav__mobile-btn" src="../../../assets/images/header-logo/menu_icon.png" alt=""></label>
     <input type="checkbox" class="nav_input" hidden id="nav__mobile-input">
     <label for="nav__mobile-input" class="nav__overlay"></label>
-    
+
     <div class="nav__mobile">
-      <label for="nav__mobile-input" class="nav__mobile-close"></label>
+      <label for="nav__mobile-input" class="nav__mobile-close">
+        <img src="../../../assets/images/header-logo/icons8-close-30.png">
+      </label>
       <div class="nav__mobile-menu">
-        <div class="nav__mobile-menu-item"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ 'Trang chủ' }}</a></div>
-        <div class="nav__mobile-menu-item"><a routerLink="/gioi-thieu" routerLinkActive="active">{{ 'Giới thiệu' }}</a></div>
-        <div class="nav__mobile-menu-item"><a routerLink="/dich-vu" routerLinkActive="active">{{ 'Dịch vụ' }}</a></div>
-        <div class="nav__mobile-menu-item"> <a routerLink="/lien-he" routerLinkActive="active">{{ 'Liên hệ' }}</a></div>
-        <div class="nav__mobile-menu-item"><a routerLink="/myaccount" routerLinkActive="active">{{ 'My Account' }}</a></div>
+        <div class="nav__mobile-menu-item"><a class="nav__mobile-menu-item-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ 'Trang chủ' }}</a></div>
+        <div class="nav__mobile-menu-item"><a class="nav__mobile-menu-item-link" routerLink="/gioi-thieu" routerLinkActive="active">{{ 'Giới thiệu' }}</a></div>
+        <div class="nav__mobile-menu-item">
+          <label for="dropdown-btn" class="nav-mobile-has-dropdown">Dịch vụ</label>
+          <input type="checkbox" class="dropdown-btn" id="dropdown-btn">
+          <ul class="dropdown-item">
+            <li><a href="" class="dropdown-item_link">Thẻ</a></li>
+            <li><a href="" class="dropdown-item_link">Tiết kiệm</a></li>
+            <li><a href="" class="dropdown-item_link">Vay</a></li>
+            <li><a href="" class="dropdown-item_link">Tài chính thông minh</a></li>
+          </ul>
+        </div>
+        <div class="nav__mobile-menu-item"><a class="nav__mobile-menu-item-link" routerLink="/lien-he" routerLinkActive="active">{{ 'Liên hệ' }}</a></div>
+        <div class="nav__mobile-menu-item"><a class="nav__mobile-menu-item-link" routerLink="/myaccount" routerLinkActive="active">{{ 'My Account' }}</a></div>
       </div>
     </div>
   </div>
