@@ -39,6 +39,10 @@
 
 .perfect-service-desc {
     margin: auto 25px;
+
+    h3 {
+      color: #08a43b;
+    }
 }
 
 .perfect-service-photo-mobile {
@@ -73,7 +77,9 @@
 
 @media screen and (min-width: 320px) and (max-width: 768px){
   .perfect-service {
+    margin-top: 0;
     padding: 20px 15px;
+
     &-wrapper {
       display: flex;
       flex-direction: column;
@@ -106,6 +112,12 @@
     }
     &-photo-mobile {
       display: block;
+      width: 100%; 
+      padding: 0 30px;
+
+      img {
+        width: 100%;
+      }
     }
 
     .second-row {
@@ -149,8 +161,15 @@
     &-photo {
       display: none;
     }
+
     &-photo-mobile {
       display: block;
+      width: 100%; 
+      padding: 0 30px;
+
+      img {
+        width: 100%;
+      }
     }
 
     .second-row {

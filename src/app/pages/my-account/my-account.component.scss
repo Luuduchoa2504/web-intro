@@ -36,7 +36,7 @@
 
         h1 {
             color: #008c44;
-            font-weight: 400;
+            font-weight: 500;
             font-style: 36px;
         }
 
@@ -82,9 +82,74 @@
 
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (min-width: 679px) and (max-width: 990px) {
 
   .account {
+
+    &__main {
+      flex-direction: column;
+  
+      &-authen {
+        padding: 10px 5%;
+        width: 100%;
+        min-height: 470px;
+      }
+    }
+
+    &__main-content-desc {
+      display: none;
+    }
+
+    &__main-content-img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 678px) {
+
+  .account {
+
+    &-title {
+      p {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+
+    &__main {
+      flex-direction: column;
+  
+      &-authen {
+        padding: 10px 5%;
+        width: 100%;
+        min-height: 470px;
+      }
+    }
+
+    &__main-content-desc {
+      display: none;
+    }
+
+    &__main-content-img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 319px) {
+
+  .account {
+
+    &-title {
+      h1{
+        font-weight: 500;
+      }
+      p {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
 
     &__main {
       flex-direction: column;

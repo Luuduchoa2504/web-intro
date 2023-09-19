@@ -1,0 +1,156 @@
+.banner {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .breadcumbs {
+    background-color: #f8f9fa;
+    height: 60px;
+    font-size: 18px;
+    vertical-align: middle;
+    padding-left: 20px;
+  
+    &__home {
+      margin: 0;
+      color: #e39717;
+    }
+  
+    &__intro {
+      margin: 0;
+      color: #008c44;
+    }
+  }
+  
+  .home {
+    &__main {
+      margin-top: 110px;
+  
+      &-introduce {
+        color: #078a32;
+      }
+  
+      &-introducing {
+        color: #e39717;
+      }
+  
+      &-title {
+        flex-direction: column;
+      }
+  
+      &-slogan {
+        color: #8e8d8d;
+        font-size: 24px;
+        letter-spacing: normal;
+      }
+    }
+  
+    &__main-content {
+      margin-top: 70px;
+    }
+  
+    &__main-content-intro {
+      padding: 0 140px;
+  
+      h2 {
+        font-size: 30px;
+        color: #009933;
+        font-size: 30px;
+      }
+      p {
+        margin-top: 36px;
+        color: #333;
+        font-size: 18px;
+      }
+    }
+  
+    &__main-service {
+      margin-top: 110px;
+      background-image: url('/src/assets/images/home-page/Layer_1.png');
+      width: 100%;
+      height: auto;
+    }
+  
+    &__main-service-item {
+  
+      &:first-child {
+        text-align: right;
+      }
+    }
+  
+    &__main-service-icon {
+      &:first-child {
+        background-color: #08a43b;
+  
+      }
+    }
+  
+  }
+
+@media only screen and (min-width: 678px) and (max-width: 990px) {
+  .home {
+
+    &__main-content {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__main-content-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 50px;
+      width: 100%;
+    }
+
+    &__main-content-photo {
+      width: 100%;
+      margin-top: 60px;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 677px) {
+  .home {
+
+    &__main-content {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__main-slogan {
+      font-size: 18px;
+    }
+
+    &__main-content-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      width: 100%;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 12px;
+      }
+    }
+
+    &__main-content-photo {
+      width: 100%;
+      margin-top: 20px;
+      padding: 0 20px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
