@@ -9,7 +9,7 @@
         margin-top: 20px;
     }
 
-    &__input {
+    .input-form {
         border: none;
         width: 365px;
         height: 40px;
@@ -28,13 +28,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .newsletter {
-        &__title {
-            font-size: 24px;
-        }
-    }
-}
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .newsletter {

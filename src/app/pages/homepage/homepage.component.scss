@@ -36,6 +36,7 @@
     }
 
     &__main-transaction-top {
+        background-position: bottom;
         background-image: url('../../../assets/images/home-page/Layer_4.png');
         height: 850px;
         background-repeat: no-repeat;
@@ -172,7 +173,48 @@
     border-radius: 6px;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 990px) {
+    .home {
+        &__main-transaction-top {
+            // min-height: 630px;
+            // max-height: 850px;
+            // background-size: 120%;
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        &__main-transaction-desc {
+            margin: 0;
+            &-item {
+                padding-left: 200px;
+            }
+        }
+
+        &__main-passport {
+            h1 {
+                text-align: center;
+                font-size: 39px;
+            }
+        }
+
+        &__main-passport-desc {
+            padding: 0 28px;
+        }
+
+        &__main-passport-content-item {
+            span {
+                font-size: 20px;
+            }
+        }
+        &__main-other-promotion {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px)  and (max-width: 990px){
     .home {
         &__main {
             width: 100%;
@@ -207,10 +249,17 @@
             background-size: 150%;
             background-repeat: no-repeat;
             background-position: center;
-            height: 470px;
+            // height: 470px;
+            height: 195px;
+
+            h1 {
+                font-size: 16px;
+            }
 
             h2 {
                 text-align: center;
+                font-size: 12px;
+                margin-top: 0;
             }
         }
 
@@ -218,13 +267,18 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-top: 25px;
+
             &-item {
                 width: 88%;
                 padding: 0;
+                margin: 0;
+
                 img {
-                    width: 14px;
-                    height: 14px;
+                    width: 12px;
+                    height: auto;
                 }
+
                 p {
                     font-size: 14px;
                 }
@@ -241,98 +295,11 @@
         &__main-passport {
             margin-top: 76px;
             flex-direction: column;
-            
-            h1 {
-                width: 85%;
-                font-size: 28px;
-                text-align: center;
-            }
-        }
-
-        &__main-passport-desc {
-            flex-direction: column;
-            width: 95%;
-            justify-content: center;
-            align-items: center;
-            padding: 0 80px
-        }
-
-        &__main-passport-content {
-
-            &-item {
-
-                img {
-                    width: 37px;
-                    max-height: 34px;
-                }
-                span {
-                    font-size: 18px;
-                    font-weight: 400;
-                }
-            }
-        }
-
-        &__main-other-promotion {
-            flex-direction: column;
-        }
-
-        &__main-other-item {
-            margin: 20px 78px;
-
-            img {
-                width: 100%;
-            }
-            
-            span {
-                font-size: 28px;
-            }
-
-            a {
-                margin-top: 100px;
-                font-size: 36px;
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-    .home {
-        &__main-transaction-top {
-            height: 195px;
-
-            h1 {
-                font-size: 16px;
-            }
-
-            h2 {
-                font-size: 12px;
-                margin-top: 0;
-            }
-        }
-
-        &__main-transaction-desc {
-            margin-top: 25px;
-
-            &-item {
-                margin: 0;
-
-                img {
-                    width: 12px;
-                    height: auto;
-                }
-
-                p {
-                    padding-left: 3px;
-                    font-size: 10px;
-                    margin-bottom: 6px;
-                }
-            }
-        }
-
-        &__main-passport {
             margin-top: 50px;
 
             h1 {
+                width: 85%;
+                text-align: center;
                 font-size: 17px;
                 margin: 0 auto;
             }
@@ -344,6 +311,12 @@
         }
 
         &__main-passport-desc {
+            flex-direction: column;
+            width: 95%;
+            justify-content: center;
+            align-items: center;
+            padding: 0 80px;
+
             img {
                 width: 285px;
                 height: auto;
@@ -361,15 +334,344 @@
                 }
 
                 span {
+                    font-weight: 400;
                     font-size: 11px;
                     padding-left: 10px;
                 }
             }
         }
 
+        &__main-other-promotion {
+            flex-direction: column;
+        }
+
         &__main-other-item {
             margin: 16px 18px;
             padding: 14px;
+
+            img {
+                width: 100%;
+            }
+
+            span {
+                margin-top: 25px;
+                font-size: 20px;
+            }
+
+            a {
+                margin-top: 35px;
+                font-size: 24px;
+            }
+        }
+
+    }
+
+    .btn-home {
+        width: 168px;
+        height: 39px;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .home {
+        &__main {
+            width: 100%;
+        }
+
+        &__main-target {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 80%;
+                height: auto;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+        &__main-transaction {
+            flex-direction: column;
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 20px;
+            }   
+        }
+
+        &__main-transaction-top {
+            background-size: 150%;
+            background-repeat: no-repeat;
+            background-position: center;
+            // height: 470px;
+            height: 195px;
+
+            h1 {
+                font-size: 16px;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 12px;
+                margin-top: 0;
+            }
+        }
+
+        &__main-transaction-desc {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+
+            &-item {
+                width: 88%;
+                padding: 0;
+                margin: 0;
+
+                img {
+                    width: 12px;
+                    height: auto;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__main-transaction-create {
+            h1 {
+                font-size: 20px;
+                margin-bottom: 40px;
+            }
+        }
+
+        &__main-passport {
+            margin-top: 76px;
+            flex-direction: column;
+            margin-top: 50px;
+
+            h1 {
+                width: 85%;
+                text-align: center;
+                font-size: 17px;
+                margin: 0 auto;
+            }
+
+            &-desc {
+                margin-top: 28px;
+                padding: 0 25px;
+            }
+        }
+
+        &__main-passport-desc {
+            flex-direction: column;
+            width: 95%;
+            justify-content: center;
+            align-items: center;
+            padding: 0 80px;
+
+            img {
+                width: 285px;
+                height: auto;
+            }
+        }
+
+        &__main-passport-content {
+            
+            &-item {
+                margin: 13px 0;
+
+                img {
+                    width: 28px;
+                    max-height: 25px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 11px;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        &__main-other-promotion {
+            flex-direction: column;
+        }
+
+        &__main-other-item {
+            margin: 16px 18px;
+            padding: 14px;
+
+            img {
+                width: 100%;
+            }
+
+            span {
+                margin-top: 25px;
+                font-size: 20px;
+            }
+
+            a {
+                margin-top: 35px;
+                font-size: 24px;
+            }
+        }
+
+    }
+
+    .btn-home {
+        width: 168px;
+        height: 39px;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .home {
+        &__main {
+            width: 100%;
+        }
+
+        &__main-target {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 80%;
+                height: auto;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+        &__main-transaction {
+            flex-direction: column;
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 20px;
+            }   
+        }
+
+        &__main-transaction-top {
+            background-size: 150%;
+            background-repeat: no-repeat;
+            background-position: center;
+            // height: 470px;
+            height: 195px;
+
+            h1 {
+                font-size: 16px;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 12px;
+                margin-top: 0;
+            }
+        }
+
+        &__main-transaction-desc {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+
+            &-item {
+                width: 88%;
+                padding: 0;
+                margin: 0;
+
+                img {
+                    width: 12px;
+                    height: auto;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__main-transaction-create {
+            h1 {
+                font-size: 20px;
+                margin-bottom: 40px;
+            }
+        }
+
+        &__main-passport {
+            margin-top: 76px;
+            flex-direction: column;
+            margin-top: 50px;
+
+            h1 {
+                width: 85%;
+                text-align: center;
+                font-size: 17px;
+                margin: 0 auto;
+            }
+
+            &-desc {
+                margin-top: 28px;
+                padding: 0 25px;
+            }
+        }
+
+        &__main-passport-desc {
+            flex-direction: column;
+            width: 95%;
+            justify-content: center;
+            align-items: center;
+            padding: 0 80px;
+
+            img {
+                width: 285px;
+                height: auto;
+            }
+        }
+
+        &__main-passport-content {
+            
+            &-item {
+                margin: 13px 0;
+
+                img {
+                    width: 28px;
+                    max-height: 25px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 11px;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        &__main-other-promotion {
+            flex-direction: column;
+        }
+
+        &__main-other-item {
+            margin: 16px 18px;
+            padding: 14px;
+
+            img {
+                width: 100%;
+            }
 
             span {
                 margin-top: 25px;
