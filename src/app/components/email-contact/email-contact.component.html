@@ -21,6 +21,9 @@
                 #phone
                 data-cy="phone"
             />
+            <p class="err-text mt-1" *ngIf="loginForm.get('phone')?.hasError('invalidPhone') && loginForm.get('phone')?.touched">
+              Số điện thoại không tồn tại! Vui lòng kiểm tra!
+            </p>
         </div>
     </div>
     <div class="form-group shadow-soft pt-2 pb-2">
@@ -35,6 +38,9 @@
                #username
                data-cy="email"
         />
+        <p class="err-text mt-1" *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched">
+          Sai định dạng email. Vui lòng nhập lại!
+        </p>
       </div>
     </div>
     <div class="form-group shadow-soft pt-2">

@@ -3,7 +3,7 @@
 }
 
 .input-form {
-    min-width: 245px;
+    min-width: 424px;
     padding: 16px;
     height: 51px;
     border-radius: 3px;
@@ -15,8 +15,18 @@
     width: 100%;
 }
 
+.err-text {
+    color: red;
+    ::ng-deep {
+      .navigate {
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    }
+  }
+
 .half-width {
-    width: 326px;
+    // width: 326px;
 }
 
 .text-area-form {

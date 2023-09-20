@@ -154,3 +154,45 @@
     }
   }
 }
+
+@media screen and (max-width: 319px) {
+  .home {
+
+    &__main-content {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__main-slogan {
+      font-size: 18px;
+    }
+
+    &__main-content-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      width: 100%;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 12px;
+      }
+    }
+
+    &__main-content-photo {
+      width: 100%;
+      margin-top: 20px;
+      padding: 0 20px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
