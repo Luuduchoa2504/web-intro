@@ -173,6 +173,28 @@
     border-radius: 6px;
 }
 
+::ng-deep {
+    .slick-dots {
+        bottom: 30px;
+        right: 41px;
+        text-align: right;
+    }
+
+    .slick-dots li button:before {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 3px solid #f0b95c;
+        background-color: #f5f6f7;
+        color: #f5f6f7;
+    }
+
+    .slick-dots li.slick-active button:before {
+        background-color: #008c44;
+        color: #008c44
+    }
+}
+
 @media screen and (min-width: 990px) {
     .home {
         &__main-transaction-top {

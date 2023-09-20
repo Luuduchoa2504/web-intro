@@ -8,9 +8,11 @@ import {Component, OnInit} from '@angular/core';
 export class HomepageComponent implements OnInit{
   slideConfig= {
     slideToScroll: 1,
-    slidesToShow: 3,
+    slidesToShow: 1,
     dots: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 10000, 
   }
 
   slides = [
