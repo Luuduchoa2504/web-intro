@@ -21,6 +21,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { PerfectServiceComponent } from './components/perfect-service/perfect-service.component';
 import { EmailContactComponent } from './components/email-contact/email-contact.component';
 import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
+import {SlickCarouselModule} from "ngx-slick-carousel";
 
 const APP_CONTAINERS = [
   HomepageComponent,
@@ -52,6 +53,7 @@ const APP_COMPONENTS = [
     ReactiveFormsModule,
     SharedModule,
     HttpClientModule,
+    SlickCarouselModule,
     // CollapseModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
