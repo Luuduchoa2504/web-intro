@@ -12,7 +12,7 @@ export class HomepageComponent implements OnInit{
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 10000, 
+    autoplaySpeed: 9000, 
   }
 
   slides = [
