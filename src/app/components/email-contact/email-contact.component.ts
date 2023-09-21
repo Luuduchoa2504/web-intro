@@ -46,10 +46,12 @@ export class EmailContactComponent {
     if (this.loginForm.invalid) {
       return;
     }
-    this.emailContactService.send(sendMailForm).subscribe((val => {
+    this.emailContactService.send(sendMailForm).subscribe((val) => {
       this.loginForm.reset();
       this._toast.showSuccess('Thành công', 'Gửi email phản hồi thành công');
-    }));
+    }, (err) => {      
+      this._toast.showError('Thành công', `${err.error.message}`);
+    });
   }
   
 }

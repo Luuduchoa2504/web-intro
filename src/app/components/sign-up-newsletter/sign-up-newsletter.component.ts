@@ -37,7 +37,7 @@ export class SignUpNewsletterComponent implements OnInit {
           this.submitForm.reset();
           this.router.navigate(['/']);
         }
-      });
+      }, (err) => {this.toastr.error(`${err.error.msg}`, 'Lỗi')});
     }
   }
 }

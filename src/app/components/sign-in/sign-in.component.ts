@@ -69,7 +69,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
         }
       },
         (err) => {
-          this._toastService.showError('Thất bại', 'Sai tên đăng nhập hoặc mật khẩu')
+          this._toastService.showError('Thất bại', `${err.error.msg}`)
         }
     );
   }

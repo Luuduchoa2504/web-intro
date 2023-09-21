@@ -68,10 +68,12 @@ export class SignUpComponent {
     if (this.signupForm.invalid) {
       return;
     }
-    this.accountService.register(singupForm).subscribe((val => {
+    this.accountService.register(singupForm).subscribe((val) => {
       this.signupForm.reset();
       this._toast.showSuccess('Thành công', 'Tạo tài khoản thành công');
-    }));
+    }, (err) => {      
+      this._toast.showError('Lỗi', `${err.error.msg}`)
+    });
   }
 
 }
